@@ -1,5 +1,4 @@
 public abstract class Account implements Statement {
-    // Protected fields as specified in UML
     protected String accountNo;
     protected double balance;
 
@@ -21,7 +20,6 @@ public abstract class Account implements Statement {
         return this.balance;
     }
 
-    // Sensible implementation of generateStatement
     @Override
     public String generateStatement() {
         return "Account Number: " + this.accountNo + 
