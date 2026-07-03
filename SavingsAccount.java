@@ -8,7 +8,6 @@ public class SavingsAccount extends Account {
 
     @Override
     public boolean withdraw(double amount) {
-        // Refuse withdrawal if it takes balance below zero
         if (balance - amount >= 0) {
             balance -= amount;
             return true;
@@ -17,7 +16,6 @@ public class SavingsAccount extends Account {
     }
 
     public void addInterest() {
-        // Adds rate% of the balance to the balance
         balance += (balance * (rate / 100));
     }
 }
